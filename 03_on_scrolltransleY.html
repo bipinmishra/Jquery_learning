@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+	$("p").css('background', 'red');
+	if($("kk").length > 0){
+	alert("element is found");
+	}
+	else{
+	alert(" element is not found");
+	}
+	
+	console.log('your message');
+    });
+});
+</script>
+<script>
+
+ $(window).on('scroll', function(){
+ var scrollTop = $(window).scrollTop() ;
+  $('.my_div').html(scrollTop + 'px');
+ $('.my_div').css('transform','translateY(' + scrollTop + 'px )');
+
+ });
+</script>
+
+<style>
+.my_div{width:500px; height:800px; background:red; transition:all .5s ease; color:#ffffff;}
+</style>
+
+</head>
+<body>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="my_div"> </div>
+
+
+
+
+</body>
+</html>

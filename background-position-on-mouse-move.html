@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Custom styles for this template -->
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<style>
+	#top-image{height:100vh; width:105%; background:url('images/bipin_img.jpg') no-repeat; background-size:cover;	background-position:0px 0px; transition:all .1s linear;}
+	.outer_wrapper{width:100%; height:100vh; overflow:hidden; background:rgba(0,0,0,0.8);}
+	.background_wrapper_overlay{width:100%; height:100vh; overflow:hidden; background:rgba(0,0,0,0.8); position:absolute; left:0px; top:0px;}
+	</style>
+  </head>
+
+  <body>
+		<div class="outer_wrapper">	
+		<div class="background_wrapper" id="top-image">
+		</div>
+		<div class="background_wrapper_overlay"></div>
+        </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+	
+	
+<script>
+$(document).ready(function() {
+  var movementStrength = 15;
+  var height = movementStrength / $(window).height();
+  var width = movementStrength / $(window).width();
+  $(".background_wrapper_overlay").mousemove(function(e) {
+    var pageX = e.pageX - ($(window).width());
+    var pageY = e.pageY - ($(window).height());
+    var newvalueX = width * pageX * -1 - 25;
+    var newvalueY = height * pageY * -1 - 50;
+    $('#top-image').css("background-position", newvalueX + "px     " + newvalueY + "px");
+  });
+});
+</script>
+
+
+  </body>
+</html>
